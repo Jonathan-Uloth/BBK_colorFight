@@ -2,6 +2,7 @@
 #define WIDGET_H
 
 #include <QWidget>
+#include "gameengine.h"
 
 class Widget : public QWidget
 {
@@ -10,5 +11,7 @@ class Widget : public QWidget
 public:
     Widget(QWidget *parent = nullptr);
     ~Widget();
+private:
+    GameEngine gameengine;
 };
 #endif // WIDGET_H
