@@ -16,3 +16,4 @@ void Widget::paintEvent(QPaintEvent *){// *event){
         for (int col=0; col<gameCells[row].size(); col++)
             painter.fillRect(row*22, col*22, 20, 20, turnNumberInColor(gameCells[row][col]));
 }
+//Ein Cooler Kommentar für GIT
