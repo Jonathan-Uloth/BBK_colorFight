@@ -11,6 +11,8 @@ class Widget : public QWidget
 public:
     Widget(QWidget *parent = nullptr);
     ~Widget();
+protected:
+    void paintEvent(QPaintEvent *event);
 private:
     GameEngine gameengine;
 };

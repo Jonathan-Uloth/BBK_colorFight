@@ -3,11 +3,7 @@
 
 #include <QObject>
 #include <QDebug>
-
-// Farbenkonfiguration
-const int COLORCOUNT = 6;
-enum Colors { RED, BLUE, GREEN, YELLOW, MAGENTA, ORANGE };
-
+#include "config.h"
 
 class GameEngine : public QObject
 {
@@ -16,13 +12,14 @@ public:
     explicit GameEngine(QObject *parent = nullptr);
 
     void printCells();
-
     void generateCells();
 
-    void generateCells();
+    QList< QList< Colors > > cells;
+
+    QList< QList< Colors > > getCells() const;
+    void setCells(const QList< QList< Colors > > &newCells);
 
 private:
-    QList< QList<Colors> > cells;
 
 signals:
 };
